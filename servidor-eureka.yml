@@ -1,0 +1,8 @@
+server:
+  port: 8761 #valor por defecto
+eureka:
+  client:
+    register-with-eureka: false #Se marcan a false para que no se registre a sí mismo
+    fetch-registry: false #Se marcan a false para que no se registre a sí mismo
+    serviceUrl:
+        defaultZone: http://localhost:8761/eureka #Es la URL que van utilizar para acceder a los servicios de este servidor
