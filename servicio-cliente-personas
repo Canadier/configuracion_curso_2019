@@ -2,7 +2,7 @@ server:
   port: 9000
 eureka:
   client:
-    register-with-eureka: false #Se marcan a false para que el servicio no se registre en Eureka
+    register-with-eureka: false
     service-url:
       defaultZone: http://localhost:8761/eureka
 client:
