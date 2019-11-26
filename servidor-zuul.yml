@@ -3,6 +3,7 @@ server:
   
 zuul:
   ignoredServices: '*'
+  ignored-headers: Access-Control-Allow-Credentials, Access-Control-Allow-Origin # Solución para los métodos POST
   routes:
       servicio-personas: # Service to create as sample
         path: /personas/** #path that will be intercepted
