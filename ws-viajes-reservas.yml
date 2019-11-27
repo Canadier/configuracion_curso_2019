@@ -1,0 +1,27 @@
+server:
+  port: 8500
+  servlet:
+    context-path: /reservas
+eureka:
+  client:
+    service-url:
+      defaultZone: http://10.2.4.11:8761/eureka
+  instance:
+    ip-address:  10.2.4.11
+    prefer-ip-adress: true
+    instance-id: 10.2.4.11:8700      
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://10.2.4.11:3306/viajes
+    username: root
+    password: root
+  jpa:
+    hibernate:
+      naming:
+        implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+client:
+  url:
+    vuelos: http://ws-viajes-vuelos/vuelos/vuelos/
